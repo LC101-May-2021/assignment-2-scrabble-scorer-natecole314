@@ -29,6 +29,7 @@ function oldScrabbleScorer(word) {
 	return letterPoints;
  }
 
+console.log(oldScrabbleScorer("tape"))
 // your job is to finish writing these functions and variables that we've named //
 // don't change the names or your program won't work as expected. //
 
