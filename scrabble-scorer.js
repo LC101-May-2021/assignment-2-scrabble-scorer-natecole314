@@ -129,7 +129,7 @@ let newPointStructure;
 function runProgram() {
    let promptOutput = initialPrompt();
    let scorerPromptOutput = scorerPrompt();
-   console.log(scorerPromptOutput(promptOutput))
+   console.log(`Score for '${promptOutput}': ${scorerPromptOutput(promptOutput)}`)
 
    
 }
