@@ -58,7 +58,7 @@ let simpleScore = function(word){
  
 		 if (simplePointStructure[pointValue].includes(word[i])) {
 			//letterPoints += `Points for '${word[i]}': ${pointValue}\n`
-      letterPoints += i;
+      letterPoints += Number(pointValue);
 		 }
  
 	  }
@@ -76,7 +76,7 @@ let vowelBonusScore = function(word){
  
 		 if (bonusVowels[pointValue].includes(word[i])) {
 			//letterPoints += `Points for '${word[i]}': ${pointValue}\n`
-      letterPoints += i;
+      letterPoints += Number(pointValue);
 		 }
  
 	  }
@@ -94,7 +94,7 @@ let scrabbleScore = function (word) {
  
 		 if (oldPointStructure[pointValue].includes(word[i])) {
 			//letterPoints += `Points for '${word[i]}': ${pointValue}\n`
-      letterPoints += i;
+      letterPoints += Number(pointValue);
 		 }
  
 	  }
@@ -129,8 +129,9 @@ let newPointStructure;
 function runProgram() {
    let promptOutput = initialPrompt();
    let scorerPromptOutput = scorerPrompt();
-   console.log(`Score for '${promptOutput}': ${scorerPromptOutput(promptOutput)}`)
-
+   let finalScore = scorerPromptOutput(promptOutput)
+   console.log(`Score for ${promptOutput} : ${finalScore}`)
+   
    
 }
 
