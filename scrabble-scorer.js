@@ -122,9 +122,44 @@ function scorerPrompt() {
     }
 
 }
-function transform() {};
+function transform(object) {
+ let newObject = {}
+ for (key in object){
+  newObject[object[key]] = key 
+ }
 
-let newPointStructure;
+ let newObject2 = {}
+ for (key in newObject){
+   newObject2[newObject] = key
+ }
+ // let newKeyArray = ""
+ 
+// for (key in object){
+
+  // newKeyArray = newKeyArray + (object[key])
+  // newKeyArray.replace(",",'')
+ console.log(newObject2)
+ }
+ 
+
+
+
+  /* console.log(key + ' '+ oldPointStructure[key])
+   console.log(oldPointStructure[key
+   ][1])
+    console.log(oldPointStructure[key])*/
+ 
+
+    //console.log(item + ','+ oldPointStructure[item])
+    //for (i = 0; i < item.length ; i++){
+     // newObject[i] += item
+    //}
+
+ // console.log(newObject)
+  //console.log(oldPointStructure)
+ // };
+
+let newPointStructure = transform(oldPointStructure);
 
 function runProgram() {
    let promptOutput = initialPrompt();
