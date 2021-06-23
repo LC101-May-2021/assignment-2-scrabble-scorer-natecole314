@@ -116,7 +116,7 @@ let scrabbleScore = function (word) {
 	let letterPoints = 0;
  
 	for (let i = 0; i < word.length; i++) {
-    letterPoints += Number(newPointStructure[word[i]])
+    letterPoints += (newPointStructure[word[i]])
 	  //for (key in newPointStructure) {
  
 		 //if (newPointStructure[key].includes(word[i])) {
@@ -155,7 +155,7 @@ for (item in object){
   for (i = 0; i < object[item].length; i++){
    
     //console.log(oldPointStructure[item][i])
-    newObject[object[item][i]] = item
+    newObject[object[item][i]] = Number(item)
     
   } 
 }return newObject;
