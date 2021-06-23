@@ -112,7 +112,7 @@ let vowelBonusScore = function(word){
   Z: '10'
 } */
 let scrabbleScore = function (word) {
-	word = word.toUpperCase();
+//	word = word//.toUpperCase();
 	let letterPoints = 0;
  
 	for (let i = 0; i < word.length; i++) {
@@ -155,7 +155,7 @@ for (item in object){
   for (i = 0; i < object[item].length; i++){
    
     //console.log(oldPointStructure[item][i])
-    newObject[object[item][i]] = Number(item)
+    newObject[object[item][i].toLowerCase()] = Number(item)
     
   } 
 }return newObject;
